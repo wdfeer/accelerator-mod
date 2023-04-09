@@ -14,7 +14,7 @@ public class AcceleratorEntity extends BlockTickerEntity {
     }
     @Override
     public float getExtraTicks(){
-        return 1;
+        return 0.5f;
     }
     @Override
     public int getRadius() {

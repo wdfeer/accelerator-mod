@@ -20,6 +20,7 @@ public class ModModelGenerator extends FabricModelProvider {
             switch (blockData.data().modelType){
                 case CubeAll -> blockStateModelGenerator.registerSimpleCubeAll(block);
                 case CubeBottomTop -> blockStateModelGenerator.registerSingleton(block, TexturedModel.CUBE_BOTTOM_TOP);
+                case Custom -> { continue; }
             }
             // for some reason this doesn't automatically add an Item model, do it manually for now
         }
