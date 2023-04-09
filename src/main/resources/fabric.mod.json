@@ -20,6 +20,9 @@
   "entrypoints": {
     "main": [
       "net.wdfeer.accelerator.AcceleratorMod"
+    ],
+    "fabric-datagen": [
+      "net.wdfeer.accelerator.AcceleratorDatagen"
     ]
   },
   "mixins": [

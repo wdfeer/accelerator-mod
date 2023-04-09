@@ -1,7 +1,6 @@
 package net.wdfeer.accelerator.block.custom;
 
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Material;
@@ -40,7 +39,7 @@ public class Accelerator extends ModBlockWithEntity {
     public static void Initialize(){
         instance = ModBlocks.RegisterBlock("accelerator",
                 new Accelerator(),
-                new BlockData(BlockModelType.CubeTopSameBottom),
+                new BlockData(BlockModelType.CubeBottomTop),
                 ItemGroup.DECORATIONS,
                 new TextLine[]{new TextLine("Range: 3x3x3", Formatting.YELLOW), new TextLine("Boost: +100%", Formatting.YELLOW)});
         blockEntityType = ModBlockEntityTypes.RegisterBlockEntityType("accelerator_entity",

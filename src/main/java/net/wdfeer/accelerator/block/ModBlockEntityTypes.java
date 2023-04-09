@@ -6,7 +6,6 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 import net.wdfeer.accelerator.AcceleratorMod;
-import net.wdfeer.accelerator.block.entity.*;
 
 public class ModBlockEntityTypes {
     public static <T extends BlockEntity> BlockEntityType<T> RegisterBlockEntityType(String name, FabricBlockEntityTypeBuilder.Factory<T> factory, net.minecraft.block.Block block){
