@@ -45,23 +45,5 @@ public class Accelerator extends ModBlockWithEntity {
         blockEntityType = ModBlockEntityTypes.RegisterBlockEntityType("accelerator_entity",
                 AcceleratorEntity::new,
                 instance);
-
-//        AdvancedAccelerator.instance = ModBlocks.RegisterBlock("advanced_accelerator",
-//                new AdvancedAccelerator(),
-//                new BlockData(BlockModelType.CubeTopSameBottom),
-//                ItemGroup.DECORATIONS,
-//                new TextLine[]{new TextLine("Range: 5x5x5", Formatting.GRAY), new TextLine("Speed: +2x", Formatting.GRAY)});
-//        AdvancedAccelerator.blockEntityType = ModBlockEntityTypes.RegisterBlockEntityType("advanced_accelerator_entity",
-//                AdvancedAcceleratorEntity::new,
-//                AdvancedAccelerator.instance);
-//
-//        UltimateAccelerator.instance = ModBlocks.RegisterBlock("ultimate_accelerator",
-//                new UltimateAccelerator(),
-//                new BlockData(BlockModelType.CubeTopSameBottom),
-//                ItemGroup.DECORATIONS,
-//                new TextLine[]{new TextLine("Range: 7x7x7", Formatting.GRAY), new TextLine("Speed: +4x", Formatting.GRAY)});
-//        UltimateAccelerator.blockEntityType = ModBlockEntityTypes.RegisterBlockEntityType("ultimate_accelerator_entity",
-//                UltimateAcceleratorEntity::new,
-//                UltimateAccelerator.instance);
     }
 }

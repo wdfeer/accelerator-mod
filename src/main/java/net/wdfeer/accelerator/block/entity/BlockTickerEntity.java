@@ -1,5 +1,6 @@
 package net.wdfeer.accelerator.block.entity;
 
+import it.unimi.dsi.fastutil.objects.ObjectArrayList;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -7,6 +8,8 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.wdfeer.accelerator.AcceleratorMod;
+
+import java.util.List;
 
 import static net.wdfeer.accelerator.util.ExtraMath.RandomRound;
 
@@ -20,10 +23,16 @@ public abstract class BlockTickerEntity extends BlockEntity {
     public boolean filter(BlockState state, BlockEntity blockEntity){
         return !(blockEntity instanceof BlockTickerEntity);
     }
-
+    public boolean stacks() { return false; }
+    public static ObjectArrayList<BlockEntity> tickedBlocks = new ObjectArrayList<>();
+    public static long timeOfTheTick = -1;
     public static void tick(World world, BlockPos thisPos, BlockState thisState, BlockTickerEntity instance){
         if (world.isClient)
             return;
+        if (timeOfTheTick != world.getTime()){
+            tickedBlocks = new ObjectArrayList<>();
+            timeOfTheTick = world.getTime();
+        }
         int radius = instance.getRadius();
         for (int x = -radius; x <= radius; x++) {
             for (int y = -radius; y <= radius; y++) {
@@ -46,6 +55,11 @@ public abstract class BlockTickerEntity extends BlockEntity {
         BlockEntity blockEntity = world.getBlockEntity(pos);
         if (blockEntity == null) return;
         if (!filter(blockState, blockEntity)) return;
+
+        if (tickedBlocks.contains(blockEntity)){
+            if (!stacks()) return;
+        } else tickedBlocks.add(blockEntity);
+
         int ticks = RandomRound(getExtraTicks());
         for (int i = 0; i < ticks; i++) {
             tickBlockEntity(world, pos, blockState, blockEntity);
