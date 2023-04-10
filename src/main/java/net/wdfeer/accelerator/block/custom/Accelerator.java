@@ -3,6 +3,7 @@ package net.wdfeer.accelerator.block.custom;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.MapColor;
 import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
@@ -20,7 +21,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class Accelerator extends ModBlockWithEntity {
     protected Accelerator() {
-        super(FabricBlockSettings.of(Material.STONE).strength(5f, 30f).requiresTool());
+        super(FabricBlockSettings.of(Material.METAL).mapColor(MapColor.IRON_GRAY).strength(5f, 30f).requiresTool());
     }
 
     @Override
@@ -39,7 +40,7 @@ public class Accelerator extends ModBlockWithEntity {
     public static void Initialize(){
         instance = ModBlocks.RegisterBlock("accelerator",
                 new Accelerator(),
-                new BlockData(BlockModelType.CubeBottomTop),
+                new BlockData(BlockModelType.CubeAll),
                 ItemGroup.DECORATIONS,
                 new TextLine[]{new TextLine("Range: 3x3x3", Formatting.YELLOW), new TextLine("Boost: +50%", Formatting.YELLOW)});
         blockEntityType = ModBlockEntityTypes.RegisterBlockEntityType("accelerator_entity",
