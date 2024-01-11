@@ -41,7 +41,7 @@ public class Accelerator extends ModBlockWithEntity {
         instance = ModBlocks.RegisterBlock("accelerator",
                 new Accelerator(),
                 new BlockData(BlockModelType.CubeAll),
-                ItemGroups.BUILDING_BLOCKS,
+                ItemGroups.FUNCTIONAL,
                 new TextLine[]{new TextLine("Range: 3x3x3", Formatting.YELLOW), new TextLine("Boost: +50%", Formatting.YELLOW)});
         blockEntityType = ModBlockEntityTypes.RegisterBlockEntityType("accelerator_entity",
                 AcceleratorEntity::new,
