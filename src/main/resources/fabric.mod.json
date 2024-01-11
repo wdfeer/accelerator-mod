@@ -8,8 +8,7 @@
     "wdfeer"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/wdfeer/accelerator-mod"
   },
   "license": "MIT",
   "icon": "assets/accelerator/icon.png",
