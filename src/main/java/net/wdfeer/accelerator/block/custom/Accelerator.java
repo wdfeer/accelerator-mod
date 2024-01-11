@@ -8,7 +8,7 @@ import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemGroups;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import net.wdfeer.accelerator.block.BlockData;
@@ -41,7 +41,7 @@ public class Accelerator extends ModBlockWithEntity {
         instance = ModBlocks.RegisterBlock("accelerator",
                 new Accelerator(),
                 new BlockData(BlockModelType.CubeAll),
-                ItemGroup.DECORATIONS,
+                ItemGroups.BUILDING_BLOCKS,
                 new TextLine[]{new TextLine("Range: 3x3x3", Formatting.YELLOW), new TextLine("Boost: +50%", Formatting.YELLOW)});
         blockEntityType = ModBlockEntityTypes.RegisterBlockEntityType("accelerator_entity",
                 AcceleratorEntity::new,

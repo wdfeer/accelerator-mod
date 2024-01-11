@@ -8,9 +8,10 @@ import net.wdfeer.accelerator.datagen.ModModelGenerator;
 
 public class AcceleratorDatagen implements DataGeneratorEntrypoint {
     @Override
-    public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
-        fabricDataGenerator.addProvider(ModBlockTagGenerator::new);
-        fabricDataGenerator.addProvider(ModModelGenerator::new);
-        fabricDataGenerator.addProvider(ModBlockLootTableGenerator::new);
+    public void onInitializeDataGenerator(FabricDataGenerator generator) {
+        var pack = generator.createPack();
+        pack.addProvider(ModBlockTagGenerator::new);
+        pack.addProvider(ModModelGenerator::new);
+        pack.addProvider(ModBlockLootTableGenerator::new);
     }
 }

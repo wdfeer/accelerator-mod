@@ -1,6 +1,6 @@
 package net.wdfeer.accelerator.datagen;
 
-import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
+import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.minecraft.block.Block;
 import net.minecraft.data.client.BlockStateModelGenerator;
@@ -10,7 +10,7 @@ import net.wdfeer.accelerator.block.BlockWithData;
 import net.wdfeer.accelerator.block.ModBlocks;
 
 public class ModModelGenerator extends FabricModelProvider {
-    public ModModelGenerator(FabricDataGenerator dataGenerator) {
+    public ModModelGenerator(FabricDataOutput dataGenerator) {
         super(dataGenerator);
     }
     @Override
