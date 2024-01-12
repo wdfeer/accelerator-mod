@@ -3,7 +3,6 @@ package net.wdfeer.accelerator.block.entity;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.util.math.BlockPos;
-import net.wdfeer.accelerator.block.custom.Accelerator;
 import net.wdfeer.accelerator.block.custom.FueledAccelerator;
 
 public class FueledAcceleratorEntity extends FueledBlockTickerEntity {

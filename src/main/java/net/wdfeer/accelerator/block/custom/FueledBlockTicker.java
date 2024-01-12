@@ -35,7 +35,7 @@ public abstract class FueledBlockTicker extends ModBlockWithEntity {
         if (!world.isClient) {
             //This will call the createScreenHandlerFactory method from BlockWithEntity, which will return our blockEntity cast to
             //a namedScreenHandlerFactory. If your block class does not extend BlockWithEntity, it needs to implement createScreenHandlerFactory.
-            NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, pos);
+            NamedScreenHandlerFactory screenHandlerFactory = createScreenHandlerFactory(state, world, pos);
 
             if (screenHandlerFactory != null) {
                 //With this call the server will request the client to open the appropriate Screenhandler
