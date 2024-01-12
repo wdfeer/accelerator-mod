@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "BAB",
+    "BBB"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:golden_apple"
+    },
+    "B": {
+      "item": "minecraft:furnace"
+    }
+  },
+  "result": {
+    "item": "accelerator:fueled_accelerator",
+    "count": 1
+  }
+}
+
