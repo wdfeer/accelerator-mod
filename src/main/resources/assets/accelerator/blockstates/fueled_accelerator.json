@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "lit=false":
+      {
+        "model": "accelerator:block/fueled_accelerator"
+      },
+    "lit=true":
+      {
+        "model": "accelerator:block/fueled_accelerator_lit"
+      }
+  }
+}

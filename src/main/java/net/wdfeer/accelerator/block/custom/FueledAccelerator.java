@@ -40,7 +40,7 @@ public class FueledAccelerator extends FueledBlockTicker {
     public static void Initialize(){
         instance = ModBlocks.RegisterBlock("fueled_accelerator",
                 new FueledAccelerator(),
-                new BlockData(BlockModelType.CubeAll),
+                new BlockData(BlockModelType.Custom),
                 ItemGroups.FUNCTIONAL,
                 new TextLine[]{
                         new TextLine("Range: 3x3x3", Formatting.YELLOW),

@@ -9,8 +9,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.wdfeer.accelerator.AcceleratorMod;
 
-import java.util.List;
-
 import static net.wdfeer.accelerator.util.ExtraMath.RandomRound;
 
 public abstract class BlockTickerEntity extends BlockEntity {

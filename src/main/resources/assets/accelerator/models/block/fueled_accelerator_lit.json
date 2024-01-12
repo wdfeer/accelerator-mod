@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "accelerator:block/fueled_accelerator_lit"
+  }
+}
