@@ -10,6 +10,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.wdfeer.accelerator.AcceleratorMod;
 import net.wdfeer.accelerator.block.custom.Accelerator;
+import net.wdfeer.accelerator.block.custom.FueledAccelerator;
 import net.wdfeer.accelerator.util.TextLine;
 import org.jetbrains.annotations.Nullable;
 
@@ -45,5 +46,6 @@ public class ModBlocks {
 
     public static void Initialize() {
         Accelerator.Initialize();
+        FueledAccelerator.Initialize();
     }
 }

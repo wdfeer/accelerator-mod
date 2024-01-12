@@ -17,6 +17,9 @@
     "main": [
       "net.wdfeer.accelerator.AcceleratorMod"
     ],
+    "client": [
+      "net.wdfeer.accelerator.ClientInitializer"
+    ],
     "fabric-datagen": [
       "net.wdfeer.accelerator.AcceleratorDatagen"
     ]
