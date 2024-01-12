@@ -1,3 +1,4 @@
 {
-  "block.accelerator.accelerator": "Accelerator"
+  "block.accelerator.accelerator": "Accelerator",
+  "block.accelerator.fueled_accelerator": "Fueled Accelerator"
 }
