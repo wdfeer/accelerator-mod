@@ -4,11 +4,11 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.MapColor;
-import net.minecraft.block.Material;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Formatting;
 import net.minecraft.world.World;
 import net.wdfeer.accelerator.block.BlockData;
@@ -21,7 +21,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class FueledAccelerator extends FueledBlockTicker {
     protected FueledAccelerator() {
-        super(FabricBlockSettings.of(Material.METAL).mapColor(MapColor.IRON_GRAY).strength(5f, 30f).requiresTool());
+        super(FabricBlockSettings.create().sounds(BlockSoundGroup.METAL).mapColor(MapColor.IRON_GRAY).strength(5f, 30f).requiresTool());
     }
 
     @Override

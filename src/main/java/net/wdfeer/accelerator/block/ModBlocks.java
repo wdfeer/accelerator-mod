@@ -7,6 +7,7 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.util.Identifier;
 import net.wdfeer.accelerator.AcceleratorMod;
 import net.wdfeer.accelerator.block.custom.Accelerator;
@@ -19,17 +20,17 @@ import java.util.ArrayList;
 public class ModBlocks {
     public static ArrayList<BlockWithData> allBlocks = new ArrayList<>();
 
-    public static Block RegisterBlock(String name, Block block, BlockData data, ItemGroup tab)
+    public static Block RegisterBlock(String name, Block block, BlockData data, RegistryKey<ItemGroup> tab)
     {
         return RegisterBlock(name, block, data, tab, null);
     }
-    public static Block RegisterBlock(String name, Block block, BlockData data, ItemGroup tab, TextLine[] tooltip)
+    public static Block RegisterBlock(String name, Block block, BlockData data, RegistryKey<ItemGroup> tab, TextLine[] tooltip)
     {
         BlockItem item = RegisterBlockItem(name, block, tab, tooltip);
         allBlocks.add(new BlockWithData(block, data, item));
         return Registry.register(Registries.BLOCK, new Identifier(AcceleratorMod.MOD_ID, name), block);
     }
-    static BlockItem RegisterBlockItem(String name, Block block, ItemGroup tab, @Nullable TextLine[] tooltip)
+    static BlockItem RegisterBlockItem(String name, Block block, RegistryKey<ItemGroup> tab, @Nullable TextLine[] tooltip)
     {
         BlockItem item;
         if (tooltip == null)
