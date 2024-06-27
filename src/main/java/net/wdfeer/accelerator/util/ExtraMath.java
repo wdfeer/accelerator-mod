@@ -1,11 +1,9 @@
 package net.wdfeer.accelerator.util;
 
-import net.minecraft.util.math.MathHelper;
-
 import java.util.Random;
 
 public class ExtraMath {
     public static int RandomRound(float f){
-        return MathHelper.floor(f) + (new Random().nextFloat() < (f % 1) ? 1 : 0);
+        return (int)Math.floor(f) + (new Random().nextFloat() < (f % 1) ? 1 : 0);
     }
 }
