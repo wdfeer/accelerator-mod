@@ -24,9 +24,6 @@
       "net.wdfeer.accelerator.AcceleratorDatagen"
     ]
   },
-  "mixins": [
-    "accelerator.mixins.json"
-  ],
   "depends": {
     "fabricloader": ">=0.14.19",
     "fabric-api": "*",
