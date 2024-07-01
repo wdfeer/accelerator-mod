@@ -3,7 +3,7 @@
   "id": "accelerator",
   "version": "${version}",
   "name": "Accelerator Mod",
-  "description": "Adds blocks that accelerate things",
+  "description": "Adds blocks that accelerate other blocks",
   "authors": [
     "wdfeer"
   ],
