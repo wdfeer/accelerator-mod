@@ -10,7 +10,7 @@
   "contact": {
     "sources": "https://github.com/wdfeer/accelerator-mod"
   },
-  "license": "MIT",
+  "license": "GPL-3.0",
   "icon": "assets/accelerator/icon.png",
   "environment": "*",
   "entrypoints": {
