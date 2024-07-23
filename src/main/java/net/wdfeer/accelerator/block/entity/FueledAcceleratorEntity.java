@@ -11,7 +11,7 @@ public class FueledAcceleratorEntity extends FueledBlockTickerEntity {
     }
     @Override
     public float getExtraTicks(){
-        return AcceleratorConfig.fueledAcceleratorBonus;
+        return AcceleratorConfig.fueledAcceleratorBonusPercent / 100f;
     }
     @Override
     public int getRadius() {

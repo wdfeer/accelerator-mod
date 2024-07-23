@@ -1,4 +1,8 @@
 {
   "block.accelerator.accelerator": "Accelerator",
-  "block.accelerator.fueled_accelerator": "Fueled Accelerator"
+  "block.accelerator.fueled_accelerator": "Fueled Accelerator",
+
+  "accelerator.midnightconfig.title": "Accelerator Mod Config",
+  "accelerator.midnightconfig.acceleratorBonusPercent": "Accelerator Bonus in %",
+  "accelerator.midnightconfig.fueledAcceleratorBonusPercent": "Fueled Accelerator Bonus in %"
 }
